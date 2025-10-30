@@ -14,7 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      menu_items: {
+        Row: {
+          category_cn: string
+          category_en: string
+          created_at: string
+          display_order: number | null
+          id: string
+          image_urls: string[]
+          ingredients_cn: string | null
+          ingredients_en: string | null
+          is_available: boolean | null
+          name_cn: string
+          name_en: string
+          price: number
+          updated_at: string
+        }
+        Insert: {
+          category_cn: string
+          category_en: string
+          created_at?: string
+          display_order?: number | null
+          id?: string
+          image_urls?: string[]
+          ingredients_cn?: string | null
+          ingredients_en?: string | null
+          is_available?: boolean | null
+          name_cn: string
+          name_en: string
+          price: number
+          updated_at?: string
+        }
+        Update: {
+          category_cn?: string
+          category_en?: string
+          created_at?: string
+          display_order?: number | null
+          id?: string
+          image_urls?: string[]
+          ingredients_cn?: string | null
+          ingredients_en?: string | null
+          is_available?: boolean | null
+          name_cn?: string
+          name_en?: string
+          price?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
